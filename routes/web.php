@@ -1,9 +1,9 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 use  App\Http\Controllers\TaoBang;
 use  App\Http\Controllers\PageController;
 use  App\Http\Controllers\PageAdminController;
+
 Route::get('/', [PageController::class, 'getIndex'])->name('trangchu.index');
 Route::get('a', [TaoBang::class,'createTable']);
 Route::prefix('index')->group(function () {
