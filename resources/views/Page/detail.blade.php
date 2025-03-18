@@ -139,18 +139,17 @@
                 <div class="widget">
                     <h3 class="widget-title">Best Sellers</h3>
                     <div class="widget-body">
-                        <div class="beta-sales beta-lists">
+                        @foreach ($bestSellers as $product)
                             <div class="media beta-sales-item">
-                                <a class="pull-left" href="product.html">
-                                    <img src="{{asset('source/assets/dest/images/products/sales/1.png')}}" alt="">
+                                <a class="pull-left" href="/index/detail/{{$product->id}}">
+                                    <img src="/source/image/product/{{ $product->image }}" alt="{{ $product->name }}">
                                 </a>
                                 <div class="media-body">
-                                    Sample Woman Top
-                                    <span class="beta-sales-price">$34.55</span>
+                                    {{ $product->name }}
+                                    <span class="beta-sales-price">${{ number_format($product->unit_price, 2) }}</span>
                                 </div>
                             </div>
-                            <!-- Additional best sellers can be added here -->
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

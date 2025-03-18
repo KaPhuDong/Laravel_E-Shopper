@@ -22,10 +22,11 @@ class PageController extends Controller
     }
 
     public function getDetail($id){
+        $bestSellers = Product::bestSellers();
         $sanpham = Product::where('id',$id)->first();
         $splienquan = Product::where('id_type',$sanpham->id_type)->paginate(3);
         $comments = Comment::where('id_product',$id)->paginate(4);
-        return view("page.detail")->with(['sanpham'=>$sanpham,'splienquan'=>$splienquan,'comments'=>$comments]);
+        return view("page.detail")->with(['sanpham'=>$sanpham,'splienquan'=>$splienquan,'comments'=>$comments, 'bestSellers'=>$bestSellers]);
     }
 
     public function newComment($id, Request $request){
