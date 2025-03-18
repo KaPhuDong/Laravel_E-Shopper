@@ -39,7 +39,6 @@ class PageController extends Controller
     }
 
     public function getTypeProduct($type_id){
-        $slide = Slide::all();
         $exist = false;
         $type_products = TypeProduct::all();
         foreach($type_products as $type){
@@ -50,7 +49,7 @@ class PageController extends Controller
         if($exist){
             $new_product= Product::where('new',1)->where('id_type',$type_id)->paginate(4);
             $promotion_product= Product::where('promotion_price',">",0)->where('id_type',$type_id)->orderBy('promotion_price','desc')->paginate(4);
-            return view('page.typeProduct',compact('slide','type_products','new_product','promotion_product'));
+            return view('page.typeProduct',compact('type_products','new_product','promotion_product'));
         }
     }
 

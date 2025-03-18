@@ -38,9 +38,8 @@ class PageAdminController extends Controller
         if($request->hasFile('inputImage')){
             $image = $request->file('inputImage');
             $nameImage = time().$image->getClientOriginalName();
-            $destinationPath = public_path('source/image/product');// trả về địa chỉ tuyệt đối trong thư mục gộc public bằng public_path
+            $destinationPath = public_path('source/image/product');
             $image->move($destinationPath,$nameImage);// Di chuyển file ảnh từ vị trí lưu trữ tạm thời khi tải đến thư mục chit định
-            // $pathImage = $image->storeAs('source/image/product',$nameImage,'public');
         }
         if(isset($nameImage)){
             $product = new product;
