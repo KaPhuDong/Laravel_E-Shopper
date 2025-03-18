@@ -79,7 +79,7 @@
                             <div class="col-sm-3">
                                 <div class="single-item">
                                     <div class="single-item-header">
-                                        <a href="/detail/{{$new->id}}">
+                                        <a href="index/detail/{{$new->id}}">
                                             <img width="200" height="200" src="/source/image/product/{{$new->image}}" alt="">
                                         </a>
                                     </div>
@@ -130,7 +130,7 @@
                             <div class="col-sm-3">
                                 <div class="single-item">
                                     <div class="single-item-header">
-                                        <a href="">
+                                        <a href="/index/detail/{{$km->id}}">
                                             <img width="200" height="200" src="/source/image/product/{{$km->image}}" alt="">
                                         </a>
                                     </div>

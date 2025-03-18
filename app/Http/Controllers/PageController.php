@@ -16,7 +16,7 @@ class PageController extends Controller
         return view('Page.trangchu',compact('slide','new_product','promotion_product'));
     }
 
-    public function getproduct(){
+    public function getProduct(){
         $products = Product::all();
         return view('Page.showProduct',compact('products'));
     }

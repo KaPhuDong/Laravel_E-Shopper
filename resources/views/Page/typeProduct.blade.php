@@ -8,7 +8,7 @@
                 <div class="col-sm-3">
                     <ul class="aside-menu">
                         @foreach($type_products as $loai_sp)
-                            <li><a href="/trangchu/type_product/{{$loai_sp->id}}">{{$loai_sp->name}}</a></li>
+                            <li><a href="{{$loai_sp->id}}">{{$loai_sp->name}}</a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -25,7 +25,7 @@
                             <div class="col-sm-3">
                                 <div class="single-item">
                                     <div class="single-item-header">
-                                        <a href="/detail/{{$new->id}}">
+                                        <a href="/index/detail/{{$new->id}}">
                                             <img width="200" height="200" src="/source/image/product/{{$new->image}}" alt="">
                                         </a>
                                     </div>
@@ -52,7 +52,7 @@
                                         <a class="add-to-wishlist" href="wishlist/add/{{$new->id}}">
                                             <i class="fa fa-heart"></i>
                                         </a>
-                                        <a class="beta-btn primary" href="/detail/{{$new->id}}">Details <i class="fa fa-chevron-right"></i></a>
+                                        <a class="beta-btn primary" href="/index/detail/{{$new->id}}">Details <i class="fa fa-chevron-right"></i></a>
                                         <div class="clearfix"></div>
                                     </div>
                                 </div>
@@ -76,7 +76,7 @@
                             <div class="col-sm-3">
                                 <div class="single-item">
                                     <div class="single-item-header">
-                                        <a href="">
+                                        <a href="/index/detail/{{$km->id}}">
                                             <img width="200" height="200" src="/source/image/product/{{$km->image}}" alt="">
                                         </a>
                                     </div>
