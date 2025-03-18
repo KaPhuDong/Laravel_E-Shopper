@@ -9,7 +9,7 @@ use  App\Models\Bill;
 use  App\Models\BillDetail;
 use App\Http\Requests\AddProduct;
 use App\Http\Requests\EditProduct;
-class PageAdminController extends Controller
+class adminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,7 +18,7 @@ class PageAdminController extends Controller
     {
         $products = Product::all();
         $sumSold = BillDetail::count();
-        return view('PageAdmin.admin',compact('products','sumSold'));
+        return view('admin.admin',compact('products','sumSold'));
     }
 
     /**
@@ -26,7 +26,7 @@ class PageAdminController extends Controller
      */
     public function create()
     {
-        return view('PageAdmin.formAddProduct');
+        return view('admin.formAddProduct');
     }
 
     /**
@@ -71,7 +71,7 @@ class PageAdminController extends Controller
     public function edit(string $id)
     {
         $product = product::find($id);
-        return view('PageAdmin.formEditProduct',compact('product'));
+        return view('admin.formEditProduct',compact('product'));
     }
 
     /**

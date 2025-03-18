@@ -26,7 +26,7 @@
             <img src='/source/image/slide/{}' alt="Hình ảnh slide">
         
     </ul>-->
-@extends('Master')
+@extends('master')
 @section('content')
 <div class="rev-slider">
     <div class="fullwidthbanner-container">

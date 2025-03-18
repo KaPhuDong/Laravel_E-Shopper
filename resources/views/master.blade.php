@@ -20,12 +20,12 @@
 
 <body>
 	<!-- header -->
-	 @include('Component.header')
+	 @include('layout.header')
 	<!-- slider -->
 	<!-- content -->
 	 @yield('content')
 	<!-- footer -->
-	 @include('Component.footer')
+	 @include('layout.footer')
 	
 	
 

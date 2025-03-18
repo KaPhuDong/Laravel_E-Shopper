@@ -13,19 +13,19 @@ class PageController extends Controller
         $slide = Slide::all();
         $new_product= Product::where('new',1)->paginate(4);
         $promotion_product= Product::where('promotion_price',">",0)->orderBy('promotion_price','desc')->paginate(4);
-        return view('Page.trangchu',compact('slide','new_product','promotion_product'));
+        return view('page.trangchu',compact('slide','new_product','promotion_product'));
     }
 
     public function getProduct(){
         $products = Product::all();
-        return view('Page.showProduct',compact('products'));
+        return view('page.showProduct',compact('products'));
     }
 
     public function getDetail($id){
         $sanpham = Product::where('id',$id)->first();
         $splienquan = Product::where('id_type',$sanpham->id_type)->paginate(3);
         $comments = Comment::where('id_product',$id)->paginate(4);
-        return view("Page.detail")->with(['sanpham'=>$sanpham,'splienquan'=>$splienquan,'comments'=>$comments]);
+        return view("page.detail")->with(['sanpham'=>$sanpham,'splienquan'=>$splienquan,'comments'=>$comments]);
     }
 
     public function newComment($id, Request $request){
@@ -49,16 +49,16 @@ class PageController extends Controller
         if($exist){
             $new_product= Product::where('new',1)->where('id_type',$type_id)->paginate(4);
             $promotion_product= Product::where('promotion_price',">",0)->where('id_type',$type_id)->orderBy('promotion_price','desc')->paginate(4);
-            return view('Page.typeProduct',compact('slide','type_products','new_product','promotion_product'));
+            return view('page.typeProduct',compact('slide','type_products','new_product','promotion_product'));
         }
     }
 
     public function getAbout(){
-        return view('Page.about');
+        return view('page.about');
     }
 
     public function getContact(){
-        return view('Page.contact');
+        return view('page.contact');
     }
 
     public function postContact(Request $request)

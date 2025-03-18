@@ -21,7 +21,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::composer('Component.header', function ($view) {
+        View::composer('layout.header', function ($view) {
             $loai_sp = TypeProduct::all();
             $view->with('loai_sp', $loai_sp);
         });
