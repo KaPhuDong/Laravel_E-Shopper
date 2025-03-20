@@ -23,3 +23,5 @@ Route::post('storeProduct', [PageAdminController::class,'store']);
 Route::get('editProduct/{id}', [PageAdminController::class,'edit']);
 Route::post('updateProduct', [PageAdminController::class,'update']);
 Route::post('deleteProduct/{id}', [PageAdminController::class,'destroy']);
+Route::get('search', [PageController::class, 'getSearch']) -> name('search');
+

@@ -38,7 +38,7 @@ class PageController extends Controller
         return redirect()->back();
     }
 
-    public function getTypeProduct($type_id){
+    public function getTypeProduct($type_id) {
         $exist = false;
         $type_products = TypeProduct::all();
         foreach($type_products as $type){
@@ -53,11 +53,11 @@ class PageController extends Controller
         }
     }
 
-    public function getAbout(){
+    public function getAbout () {
         return view('page.about');
     }
 
-    public function getContact(){
+    public function getContact () {
         return view('page.contact');
     }
 
@@ -67,4 +67,9 @@ class PageController extends Controller
         return "Form contact đã được gửi thành công!";
     }
 
+    public function getSearch(Request $request) {
+        $key = $request->input('search'); 
+        $products = Product::where('name', 'LIKE', "%$key%")->paginate(4);
+        return view('page.search', compact('products', 'key'));
+    }
 }
