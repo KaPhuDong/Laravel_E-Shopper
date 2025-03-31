@@ -16,7 +16,7 @@
                             <div class="col-sm-3">
                                 <div class="single-item">
                                     <div class="single-item-header">
-                                        <a href="detail/{{$product->id}}"><img width="200" height="200"
+                                        <a href="index/detail/{{$product->id}}"><img width="200" height="200"
                                                 src="/source/image/product/{{$product->image}}" alt=""></a>
                                     </div>
                                     @if($product->promotion_price==!0)

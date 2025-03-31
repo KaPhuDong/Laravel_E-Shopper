@@ -3,6 +3,7 @@ use Illuminate\Support\Facades\Route;
 use  App\Http\Controllers\TaoBang;
 use  App\Http\Controllers\PageController;
 use  App\Http\Controllers\PageAdminController;
+use  App\Http\Controllers\UserController;
 
 Route::get('/', [PageController::class, 'getIndex'])->name('trangchu.index');
 Route::get('a', [TaoBang::class,'createTable']);
@@ -24,4 +25,13 @@ Route::get('editProduct/{id}', [PageAdminController::class,'edit']);
 Route::post('updateProduct', [PageAdminController::class,'update']);
 Route::post('deleteProduct/{id}', [PageAdminController::class,'destroy']);
 Route::get('search', [PageController::class, 'getSearch']) -> name('search');
+Route::get('register', function () {						
+	return view('users.register');						
+});	
+Route::post('register', [UserController::class, 'Register']);		
+Route::get('login', function () {						
+	return view('users.login');						
+});		
+Route::post('login', [UserController::class, 'Login']);				
+Route::get('logout', [UserController::class, 'Logout']);
 
