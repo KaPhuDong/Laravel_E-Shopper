@@ -35,3 +35,12 @@ Route::get('login', function () {
 Route::post('login', [UserController::class, 'Login']);				
 Route::get('logout', [UserController::class, 'Logout']);
 
+Route::get('add-to-cart/{id}', [PageController::class, 'getAddToCart'])->name('themgiohang');
+Route::get('del-cart/{id}', [PageController::class, 'getDelItemCart'])->name('xoagiohang');
+Route::get('del-cart/{id}', [PageController::class, 'getDelItemCart'])->name('xoagiohang');	
+
+Route::get('/return-vnpay', function () {						
+    return view('vnpay.return-vnpay');						
+});
+
+

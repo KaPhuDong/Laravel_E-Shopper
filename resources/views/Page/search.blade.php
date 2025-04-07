@@ -37,11 +37,13 @@
                                         </p>
                                     </div>
                                     <div class="single-item-caption">
-                                        <a class="add-to-cart pull-left" href="hoo">
+                                        <a class="add-to-cart pull-left" href="/add-to-cart/{{$product->id}}">
                                             <i class="fa fa-shopping-cart"></i>
                                         </a>
-
-                                        <a class="add-to-wishlist" href="wishlist/add/{{$product->id}}"><i class="fa fa-heart"></i></a>
+                                            
+                                        <a class="add-to-wishlist" href="wishlist/add/{{$product->id}}">
+                                            <i class="fa fa-heart"></i>
+                                        </a>
 
                                         <a class="beta-btn primary" href="detail/{{$product->id}}">Details
                                             <i class="fa fa-chevron-right"></i>

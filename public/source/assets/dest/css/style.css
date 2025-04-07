@@ -1699,11 +1699,12 @@ ul.children ul.children li:hover > a {
     margin-top: 0;
     line-height: 100%;
     padding-right: 70px;
+    max-height: 100px;
 }
 
 .cart-item .media .pull-left,
 .cart-item .media .pull-left .img {
-    width: 50px;
+    width: 50%;
 }
 
 .cart-item .media-body > span {

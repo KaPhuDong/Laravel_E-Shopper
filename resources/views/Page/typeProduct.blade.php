@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-sm-3">
                     <ul class="aside-menu">
-                        @foreach($type_products as $loai_sp)
+                        @foreach($promotion_product as $loai_sp)
                             <li><a href="{{$loai_sp->id}}">{{$loai_sp->name}}</a></li>
                         @endforeach
                     </ul>

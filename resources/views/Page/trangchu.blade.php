@@ -72,7 +72,7 @@
                                         </p>
                                     </div>
                                     <div class="single-item-caption">
-                                        <a class="add-to-cart pull-left" href="themgiohang/{{$new->id}}">
+                                        <a class="add-to-cart pull-left" href="add-to-cart/{{$new->id}}">
                                             <i class="fa fa-shopping-cart"></i>
                                         </a>
                                         <a class="add-to-wishlist" href="wishlist/add/{{$new->id}}">
@@ -118,7 +118,7 @@
                                         </p>
                                     </div>
                                     <div class="single-item-caption">
-                                        <a class="add-to-cart pull-left" href="themgiohang//{{$km->id}}">
+                                        <a class="add-to-cart pull-left" href="add-to-cart/{{$km->id}}">
                                             <i class="fa fa-shopping-cart"></i>
                                         </a>
                                         <a class="add-to-wishlist" href="wishlist/add/{{$km->id}}">

@@ -50,7 +50,7 @@
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            <a class="add-to-cart" href="/themgiohang/{{$sanpham->id}}">
+                            <a class="add-to-cart" href="/add-to-cart/{{$sanpham->id}}">
                                 <i class="fa fa-shopping-cart"></i>
                             </a>
                         </div>
@@ -123,7 +123,7 @@
                                         </p>
                                     </div>
                                     <div class="single-item-caption">
-                                        <a class="add-to-cart pull-left" href="/themgiohang/{{$sp->id}}">
+                                        <a class="add-to-cart pull-left" href="/add-to-cart/{{$sp->id}}">
                                             <i class="fa fa-shopping-cart"></i>
                                         </a>
                                         <a class="beta-btn primary" href="{{$sp->id}}">Details <i class="fa fa-chevron-right"></i></a>
